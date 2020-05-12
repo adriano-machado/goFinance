@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+}
+
+interface InteractiveLinkProps {
+  active: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -33,4 +38,9 @@ export const Container = styled.div<ContainerProps>`
       }
     }
   }
+`;
+
+export const InteractiveLink = styled(Link)<InteractiveLinkProps>`
+  padding-bottom: 10px;
+  border-bottom: 2px solid ${props => (props.active ? '#ff872c' : '#5636d3')};
 `;
