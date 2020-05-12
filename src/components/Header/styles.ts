@@ -6,7 +6,7 @@ interface ContainerProps {
 }
 
 interface InteractiveLinkProps {
-  active?: true | false;
+  active?: number;
 }
 
 export const Container = styled.div<ContainerProps>`

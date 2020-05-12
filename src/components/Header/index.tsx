@@ -13,11 +13,14 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        <InteractiveLink active={window.location.pathname === '/'} to="/">
+        <InteractiveLink
+          active={Number(window.location.pathname === '/')}
+          to="/"
+        >
           Listagem
         </InteractiveLink>
         <InteractiveLink
-          active={window.location.pathname === '/import'}
+          active={Number(window.location.pathname === '/import')}
           to="/import"
         >
           Importar
